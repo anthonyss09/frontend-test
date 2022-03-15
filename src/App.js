@@ -1,24 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+import {BrowserRouter, Routes, Route} from "react-router-dom"
+import {ListsHome, ListPage, CreateListScreen, EditList} from "./screens";
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<ListsHome />}/>
+        <Route path="/lists/:list" element={<ListPage />}/>
+        <Route path="/create-list" element={<CreateListScreen />}/>
+        <Route path="/edit-list/:list" element={<EditList />}/>
+      </Routes>
+    </BrowserRouter>
   );
 }
 
