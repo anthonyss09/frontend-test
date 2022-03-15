@@ -96,6 +96,9 @@ body {
   padding-top: 1px;
   margin-right: 8px; */
 }
+.strike-thru:hover {
+  background: #242424;
+}
 .check-item-container {
   display: flex;
   flex-direction: row;
