@@ -8,7 +8,7 @@ export default function Checkbox (props) {
         <div style={props.style} onClick={props.onClick} onMouseDown={props.onMouseDown} onMouseUp={props.onMouseUp}>
 
         {props.checkStatus===false&&<div className="checkbox">
-            <img src={check} alt="check symbol" />
+            {/* <img src={check} alt="check symbol" /> */}
         </div>}
 
         {props.checkStatus===true&&

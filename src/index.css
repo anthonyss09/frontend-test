@@ -67,6 +67,9 @@ body {
   padding-top: 1px;
   margin-right: 8px;
 }
+.checkbox:hover {
+  background: #f4f4f4;
+}
 .checked-checkbox {
   background: #2fe6ff;
   display: inline-block;

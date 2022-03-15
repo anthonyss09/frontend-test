@@ -55,37 +55,19 @@ export default function MainList (props) {
        
     }
 
-    // const handleBlur = (e) => {
+    // const handleClick = (index) => {
         
-    //         const name = e.target.name;
-    //         setToggle(false);
-    //         const value = {item:e.target.value, checkStatus: false};
-    //         let itemsCopy = values.listItems;
-    //         itemsCopy.push(value);
-
-    //     if (name === "extraItem") {
-    //         setValues((prev) => {
+    //     const replicaItems = values.listItems;
+    //     const item = replicaItems[index];
+    //     item.checkStatus = !item.checkStatus;
+    //     replicaItems.splice(index,1, item);
+    //             setValues((prev) => {
     //                 return {
     //                     listName: prev.listName,
-    //                     listItems: itemsCopy
+    //                     listItems: replicaItems
     //                 }
     //             })
-    //     }  
     // }
-
-    const handleClick = (index) => {
-        
-        const replicaItems = values.listItems;
-        const item = replicaItems[index];
-        item.checkStatus = !item.checkStatus;
-        replicaItems.splice(index,1, item);
-                setValues((prev) => {
-                    return {
-                        listName: prev.listName,
-                        listItems: replicaItems
-                    }
-                })
-    }
 
     const handleFocus = (e) => {
         const value = e.target.value;
