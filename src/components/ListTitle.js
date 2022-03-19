@@ -41,10 +41,10 @@ export default function ListTitle () {
                     <div className=" link big-title-container" key={index}>
                         <div className="list-title-container list-title">
                             <div className="list-title-link">
-                                {/* <Link to={"/lists/"+list.listName} className="link title-link">{list.listName}
-                                </Link> */}
+                                <Link to={"/lists/"+list.listName} className="link title-link">{list.listName}
+                                </Link>
 
-                                {list.listName}
+                                
                             </div>
                                 <Link to="#" className="link icon-links elipses-container">
 

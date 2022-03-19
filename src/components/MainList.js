@@ -130,7 +130,7 @@ export default function MainList (props) {
                      checkStatus={item.checkStatus}  onMouseDown={handleMouseDown} onMouseUp={() => {
                     handleMouseUp(index)}}/>
 
-                    <input type="text" defaultValue={item.item} name="listItem" placeholder="add item" onFocus={handleFocus}
+                    <textarea wrap="soft" type="text" defaultValue={item.item} name="listItem" placeholder="add item" onFocus={handleFocus}
                     className="single-item"  onChange={(e) => {
                         handleChange(e,index);
                     }} style={{opacity: (item.item===""||item.checkStatus==="strike-thru")&&"0.2",display: values.listItems[index].item===""&&props.listPage&&"none",textDecorationLine: item.checkStatus==="strike-thru"&&"line-through"
