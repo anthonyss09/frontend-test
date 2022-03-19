@@ -14,6 +14,25 @@ const Wrapper = styled.section`
         font-family: Inter;
         font-style: normal;
     }
+    textarea {
+         border: none;
+        font-family: Inter;
+        font-style: normal;
+        resize: none;
+    }
+    textarea:focus, input:focus{
+    outline: 0;
+}
+// [contenteditable]:empty:before {
+//   content: attr(placeholder);
+//   display: block;
+//   outline: none:
+//   /* For Firefox */
+// }
+
+[contenteditable]:focus {
+  outline: 0px solid transparent:
+}
     .title-input {
         font-weight: 600;
         font-size: 28px;
@@ -42,6 +61,10 @@ const Wrapper = styled.section`
         line-height: 140%;
         letter-spacing: -0.005em;
         color: #242424;
+        width: 85%;
+        white-space: normal;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
         // opacity: 0.2;
     }
     .check-box {

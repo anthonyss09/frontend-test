@@ -9,6 +9,7 @@ export default function MainList (props) {
     
     const listName = props.listName;
     const listItems = props.listItems;
+
     
     const [values, setValues] = useState({
         listName: listName,
@@ -117,7 +118,7 @@ export default function MainList (props) {
             <CreateHeader listItems={values.listItems} listName={values.listName} link={props.link} screen={props.screen} name={props.name}/>
 
             <div className="list-container">
-            <input type="text" name="listName" className="title-input" defaultValue={values.listName} placeholder="List name" key={300} autoFocus={props.autoFocus} onChange={(e) => {
+            <textarea  wrap="soft" type="text" name="listName" className="title-input" defaultValue={values.listName} placeholder="List name" key={300} autoFocus={props.autoFocus} onChange={(e) => {
                     handleChange(e, 0, "listName", 0);
                 }}
                 style={{opacity: values.listName===""&&"0.2"}}/>
@@ -135,6 +136,15 @@ export default function MainList (props) {
                     }} style={{opacity: (item.item===""||item.checkStatus==="strike-thru")&&"0.2",display: values.listItems[index].item===""&&props.listPage&&"none",textDecorationLine: item.checkStatus==="strike-thru"&&"line-through"
                     }}
                     />
+
+                    {/* <span contentEditable={true}type="text" defaultValue={item.item} name="listItem" 
+                    rows="1" 
+                    placeholder="add item" onFocus={handleFocus}
+                    className="single-item"  onChange={(e) => {
+                        handleChange(e,index);
+                    }} style={{opacity: (item.item===""||item.checkStatus==="strike-thru")&&"0.2",display: values.listItems[index].item===""&&props.listPage&&"none",textDecorationLine: item.checkStatus==="strike-thru"&&"line-through"
+                    }}
+                    /> */}
                 </div>
 
                 </div>

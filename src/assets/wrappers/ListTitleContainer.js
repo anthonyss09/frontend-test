@@ -14,10 +14,17 @@ const Wrapper = styled.section`
         border: 0.75px solid #ECECEC;
         box-sizing: border-box;
         border-radius: 8px;
-        margin-bottom: 16px
+        margin-bottom: 16px;  
     }
+   .list-title-link {   
+        max-width: 90%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+   }
     .list-title-container:hover {
         box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.08);
+        
     }
     .list-title-container:active {
         background: #F4F4F4;

@@ -40,10 +40,12 @@ export default function ListTitle () {
                     :lists.map((list, index) => 
                     <div className=" link big-title-container" key={index}>
                         <div className="list-title-container list-title">
-                            <span>
-                                <Link to={"/lists/"+list.listName} className="link">{list.listName}
-                                </Link>
-                            </span>
+                            <div className="list-title-link">
+                                {/* <Link to={"/lists/"+list.listName} className="link title-link">{list.listName}
+                                </Link> */}
+
+                                {list.listName}
+                            </div>
                                 <Link to="#" className="link icon-links elipses-container">
 
                             <Elipses onClick={(e) => {
